@@ -1,6 +1,6 @@
-# Programming 1 (NPRG030) and Introduction to Algorithms (NPRG062) Practicals
+# Programming 1 (NPRG030) and Introduction to Algorithms (NPRG062) Tutorials
 
-Practicals happen every Thursday (10:40 and 14:00).
+Tutorials happen every Thursday (10:40 and 14:00).
 
 # Useful Links
 
@@ -20,11 +20,11 @@ Practicals happen every Thursday (10:40 and 14:00).
 
 # How to Pass
 
-To pass the Introduction to Algorithms practicals, you need to have sufficient homework score. To pass the Programming 1 practicals, you need to have sufficient homework score, pass the test at the end of the semester, and submit and present your semestral work.
+To pass the Introduction to Algorithms tutorials, you need to have sufficient homework score. To pass the Programming 1 tutorials, you need to have sufficient homework score, pass the test at the end of the semester, and submit and present your semestral work.
 
 ## Homework
 
-Homework is submitted via ReCodEx (see above). To pass the practicals, your homework score needs to be at least 70% of the maximum (excluding bonus assignments).
+Homework is submitted via ReCodEx (see above). To pass the tutorials, your homework score needs to be at least 70% of the maximum (excluding bonus assignments).
 
 ## Test
 
