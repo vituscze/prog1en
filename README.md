@@ -24,7 +24,7 @@ To pass the Introduction to Algorithms practicals, you need to have sufficient h
 
 ## Homework
 
-Homework is submitted via ReCodEx (see above). To pass the practicals, your homework score needs to be at least 60% of the maximum (excluding bonus assignments).
+Homework is submitted via ReCodEx (see above). To pass the practicals, your homework score needs to be at least 70% of the maximum (excluding bonus assignments).
 
 ## Test
 
@@ -34,7 +34,7 @@ There will be a programming test at the very end of the semester. If you do not 
 
 For your semestral project, you will choose and solve a nontrivial programming task. Students typically implement some interesting algorithm, write a simple computer game or a command line tool. Before you start working on your project, I'll first need to approve the topic to make sure it's not too easy (or too hard). Send me a short description and specification of your project and wait for me to approve it before you start writing code.
 
-I recommend picking a topic before the end of the year (calendar, not academic year). Similarly, the project itself should be submitted and presented before the end of the exam period. However, the absolute deadline to submit your project is the end of August (i.e. next year). I won't accept any submissions after this date. To submit your project, you need to provide the following:
+Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cuni.cz/~dingle/2023-4/prog_1/programming_1.html). To submit your project, you need to provide the following:
 
 * **Implementation** - source code
 * **Test data** - sample inputs and outputs, if applicable
