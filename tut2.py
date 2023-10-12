@@ -234,9 +234,9 @@ largest2 = -1
 
 for line in sys.stdin:
     n = int(line)
-    if n > largest:
+    if n >= largest:
         largest, largest2 = n, largest
-    elif n > largest2:
+    elif n >= largest2:
         largest2 = n
 print("Second largest: ", largest2)
 
