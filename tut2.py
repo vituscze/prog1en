@@ -22,7 +22,7 @@
 # For example, 2^5 - 1 = 31 = 11111_2
 #
 # Recall that 2^10 ~ 10^3, i.e. 10 digits in base 2 roughly corresponds to 3 digits in base 10.
-# 82,589,933 digits in base 2 is therefore around 25,000,000 digits in base 10
+# 82,589,933 digits in base 2 is therefore around 25,000,000 digits in base 10 (83M / 10 * 3).
 
 ## Bertrand's postulate ##
 
@@ -43,22 +43,31 @@
 # Only one (7) is prime. 1 / 4 = 25%.
 
 n = int(input("Enter n: "))
-total = 0
-primes = 0
+total  = 0  # How many numbers are in the range
+primes = 0  # How many prime numbers are in the range
 for p in range(n + 1, 2 * n):
     isPrime = True
     factor = 2
+    # Instead of checking factor <= int(sqrt(p)), which
+    # goes through floating point numbers, we check
+    # factor * factor <= p which doesn't.
     while factor * factor <= p:
-        if p % factor == 0:
-            isPrime = False
-            break
+        if p % factor == 0:  # If factor divides p, then we have a composite number
+            isPrime = False  # and a composite number can't be a prime
+            break  # No need to find other factors
         factor += 1
+    # At this point, the isPrime variable contains
+    # the correct result and we can use it to increment
+    # the primes variable.
     total += 1
     if isPrime:
         primes += 1
 
 print(primes, "prime number(s) in the range ", n, "< n <", 2 * n)
 print(100 * primes / total, "% are prime")
+
+# Note that total is actually always n - 1, so we technically don't have
+# to keep track of it in the cycle.
 
 ## Most Repeated Factor ##
 
@@ -69,15 +78,15 @@ print(100 * primes / total, "% are prime")
 n = int(input("Enter n: "))
 
 factor = 2
-factorMax = -1
-countMax = -1
+factorMax = -1  # This keeps track of the most repeated factor
+countMax  = -1  # and its exponent
 
 while factor * factor <= n:  # Is this correct? Don't we need to check against the original n?
-    count = 0
+    count = 0  # This keeps track of the exponent of the prime factor
     while n % factor == 0:
         count += 1
         n //= factor
-    if count >= countMax:
+    if count >= countMax:  # Exponent is higher, we found a factor with even more repetitions
         countMax = count
         factorMax = factor
     # if count > 0:
@@ -99,8 +108,11 @@ print('Repetitions:', countMax)
 
 count = 0
 for p in range(100, 1000):
+    # p % 2 == 0 checks if the number is even (i.e. last digit is even), we can check
+    # the other digits in the same way by first dividing by a power of 10
     if p % 2 == 0 or (p // 10) % 2 == 0 or (p // 100) % 2 == 0:
         continue
+    # Same primality check as above
     factor = 2
     isPrime = True
     while factor * factor <= p:
@@ -128,11 +140,14 @@ print(count)
 a = int(input("Enter a: "))
 b = int(input("Enter b: "))
 
+# Euclid's algorithm
 x = a
 y = b
 while y > 0:
     x, y = y, x % y
 
+# x is now the gcd of a and b. We know it divides both numbers (otherwise it wouldn't be gcd)
+# so we can use integer division (//) to simplify the fraction.
 print(a, '/', b, '=', a // x, '/', b // x)
 
 ### Programming 1 Tutorial ###
@@ -193,7 +208,7 @@ n = int(input("How many dice? "))
 total = 0
 rolls = ''
 for i in range(n):
-    result = random.randint(1, 6)
+    result = random.randint(1, 6)  # Generates an integer from the range 1 to 6 (inclusive).
     rolls += str(result) + ' '
     total += result
 print(rolls)
@@ -218,6 +233,8 @@ total = 0.0
 for line in sys.stdin:
     count += 1
     total += float(line)
+# If the user enters no numbers, we would be dividing by zero. So we skip this case.
+# Alternatively you could add else branch to tell the user about the problem.
 if count != 0:
     print(total / count)
 
@@ -229,16 +246,23 @@ if count != 0:
 
 import sys
 
-largest = -1
-largest2 = -1
+largest  = -1  # Largest number
+largest2 = -1  # Second largest number
 
 for line in sys.stdin:
     n = int(line)
     if n >= largest:
+        # If we find a new largest number, the original largest
+        # number becomes the 2nd largest and the new number becomes
+        # the largest. We can do that simulatenously by using multiple assignment.
         largest, largest2 = n, largest
     elif n >= largest2:
         largest2 = n
 print("Second largest: ", largest2)
+
+# Think about what happens when the series of input integers contains duplicates.
+# We would expect that the 2nd largest number in the series 1 3 3 2 would be 3.
+# Try running the code with that series.
 
 ## Triangle ##
 
@@ -270,10 +294,15 @@ for i in range(n):
 
 s = input()
 double = False
+# Valid indices for a string s are 0, 1, ..., len(s) - 1.
+# For example, s[len(s) - 1] == s[-1] is the last character in a string.
+# We check the characters at given positions in pairs: 0,1; 1,2; 2,3; etc
+# The last pair we need to check is len(s) - 2, len(s) - 1, so we want
+# our for loop to end at len(s) - 2, hence the following range(...):
 for i in range(len(s) - 1):
     if s[i] == s[i + 1]:
         double = True
-        break
+        break  # No need to check the rest, it won't affect the result
 if double:
     print('double')
 else:
@@ -348,6 +377,6 @@ fibSum = 0
 while a < 4_000_000:
     if a % 2 == 0:
         fibSum += a
+    # Move a and b one step along the sequence of Fibonacci numbers
     a, b = b, a + b
 print(fibSum)
-
