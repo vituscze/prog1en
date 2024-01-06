@@ -247,7 +247,7 @@ class StringStream(Stream):
         self.pos = 0
 
     def next_line(self):
-        if self.pos + 1 == len(self.data):
+        if self.pos + 1 >= len(self.data):
             return None
         self.pos += 1
         return self.data[self.pos - 1]
