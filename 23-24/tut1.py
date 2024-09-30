@@ -97,6 +97,46 @@ seconds_in_year = 365 * 24 * 60 * 60
 #
 # We can immediately see that the number is always 1 higher than a multiple of 4.
 
+## Bases ##
+
+# a) What is 110100_2 in base 10? What is ab_16 in base 10?
+# b) What is 95_10 in base 2? In base 16?
+# c) What is 67_8 in base 10?
+# d) What is 67_10 in base 8?
+# e) A byte holds a value from 0_10 to 255_10. In hexadecimal, what is the smallest and largest value that can be stored in a byte?
+# f) How many digits does 100_10 have when written in base 5? How many digits does 500_10 have when written in the same base?
+
+# How to extract digits? Let's look at base 10:
+#  431 div 10 = 43 (1)
+# The remainder gives us the last digit, the quotient is everything BUT the last digit.
+# Same thing works for any base.
+
+# a) 1*32+1*16+0*8+1*4+0*2+0*1 = 52; 10*16+11*1 = 171
+# b)
+#   95 div 2 = 47 (1)
+#   47 div 2 = 23 (1)
+#   23 div 2 = 11 (1)
+#   11 div 2 = 5  (1)
+#    5 div 2 = 2  (1)
+#    2 div 2 = 1  (0)
+#    1 div 2 = 0  (1)
+#
+# 95_10 = 1011111_2
+#
+#   95 div 16 = 5 (15)
+#    5 div 16 = 0 (5)
+#
+# 95_10 = 5f_16
+# c) 6*8+7*1 = 55
+# d)
+#   67 div 8 = 8 (3)
+#    8 div 8 = 1 (0)
+#    1 div 8 = 0 (1)
+#
+# 67_10 = 103_8
+# e) 255 = 256 - 1 = 2^8 - 1 = 16^2 - 1 = 100_16 - 1_16 = ff_16
+# f) 100_5 = 5^2 = 25; 100_10 = 400_5 i.e. 3 digits; multiplying by base just adds 0 at the end
+
 
 ### Programming 1 Tutorial ###
 
@@ -125,7 +165,7 @@ seconds_in_year = 365 * 24 * 60 * 60
 #     * Test data (sample inputs and outputs, if applicable)
 #     * User documentation (explain how to use the program to your users)
 #     * Developer documentation (explain how your programs works to other developers)
-#   - Deadlines are on the course page (https://ksvi.mff.cuni.cz/~dingle/2024-5/prog_1/programming_1.html)
+#   - Deadlines are on the course page (https://ksvi.mff.cuni.cz/~dingle/2023-4/prog_1/programming_1.html)
 
 # Study materials
 #
@@ -301,16 +341,6 @@ if z > largest:
     largest = z
 print('The largest is', largest)
 
-## Numbers from 2 to 20 ##
-
-# Print the even numbers from 2 to 20 on the console. (Don't use a separate
-# print statement for each number!)
-
-n = 2
-while n <= 20:
-    print(n)
-    n = n + 2
-
 ## Factorial ##
 
 # Write a program that reads a number N ≥ 0 and prints the value of N!, i.e. 1 ⋅ 2 ⋅ … ⋅ N.
@@ -348,57 +378,6 @@ for i in range(1, n + 1):
         print(i)
 print('There are', count, 'divisors')
 
-## Making Change ##
-
-# Read a price in Czech crowns. Print out a combination of 20-Kč, 10-Kč, 5-Kč
-# and 1-Kč coins that add up to the price, using the smallest possible number
-# of coins.
-
-# Enter price: 67
-# 20 Kc: 3
-# 10 Kc: 0
-# 5 Kc: 1
-# 1 Kc: 2
-
-price = int(input('Enter price: '))
-# c20 = price // 20
-# price = price - c20 * 20
-#
-# If we use the modulo operation, we can avoid creating a variable for
-# each coin amount:
-print('20 Kc:', price // 20)
-price = price % 20
-print('10 Kc:', price // 10)
-price = price % 10
-print('5 Kc:', price // 5)
-price = price % 5
-print('1 Kc:', price)
-
-## Power of Two ##
-
-# Read an integer. Print "pow" if it is a power of 2, "no" otherwise. (Note: 1
-# is actually a power of 2, since 20 = 1).
-
-# Enter number: 64
-# pow
-# ===
-# Enter number: 68
-# no
-# ===
-# Enter number: 256
-# pow
-# ===
-# Enter number: 1
-# pow
-
-n = int(input('Enter a number: '))
-while n % 2 == 0:
-    n = n // 2
-if n == 1:
-    print('pow')
-else:
-    print('no')
-
 ## Leap Years ##
 
 # Read a year from the console, and write out "leap" if it is a leap year,
@@ -425,3 +404,76 @@ if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
 else:
     print('no leap')
 
+## Converting bases ##
+
+# Here's the code from the lecture that converts a number in an arbtirary base to base 10:
+
+s = input('Enter digits: ')
+b = int(input('Enter base: '))
+
+n = 0
+for c in s:
+    n = b * n + int(c)
+
+print(n)
+
+# However, it only works for bases 2-10. We need to modify the code to recognize letters as digits.
+# In computers, characters are stored as numbers. The first 128 characters are pretty much always the
+# same and are given by the ASCII encoding. The situation is more complicated after that, but we won't
+# deal with that here, at least for now. Python has two useful built-in functions that can convert
+# between the character and its numeric value:
+#
+# >>> ord('a')
+# >>> chr(97)
+#
+# Conveniently, letters 'a' through 'z' are all next to eachother, as are the digits.
+
+for i in range(33, 127):
+    print(i, chr(i))
+
+# We can check if the character is a number or a letter and then use the appropriate value:
+
+s = input('Enter digits: ')
+b = int(input('Enter base: '))
+
+n = 0
+for c in s:
+    if ord('0') <= ord(c) <= ord('9'): # digit
+        digit = ord(c) - ord('0')
+    elif ord('a') <= ord(c) <= ord('z'): # lower case letter
+        digit = ord(c) - ord('a') + 10
+    else: # everything else
+        digit = ord(c) - ord('A') + 10
+    n = b * n + digit
+
+print(n)
+
+# Going the other way, we have:
+
+n = int(input('Enter n: '))
+b = int(input('Enter base: '))
+
+s = ''
+while n > 0:
+    d = n % b
+    s = str(d) + s   # prepend d to s
+    n = n // b
+
+print(s)
+
+# Again, doesn't work for bases >10. We can fix it in the same way:
+
+n = int(input('Enter n: '))
+b = int(input('Enter base: '))
+
+s = ''
+while n > 0:
+    d = n % b
+    if d <= 9:
+        digit = str(d)
+    else:
+        digit = chr(ord('A') + d - 10)
+    s = digit + s   # prepend d to s
+    n = n // b
+
+print(s)
