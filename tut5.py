@@ -66,6 +66,10 @@ def bsearch(a, k):
 # How many times do we have to do that until the range has just a single element?
 # O(log n).
 
+# Suppose the list contains multiple elements that have the value k. What happens
+# to lo and hi if we remove the first if (i.e. the one with a[mid] == k)?
+# Is that useful in any way?
+
 ## Random Array ##
 
 # Write a program that reads an integer N and generates a random array of N
