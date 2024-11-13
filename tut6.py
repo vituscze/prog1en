@@ -95,7 +95,7 @@ def avg_case(n, tries=10000):
 # unsorted portion with the minimum leaves the other element in a position that's
 # likely to get swapped again.
 
-# Consider the array that's sorted expect the maximum element is at the beginning:
+# Consider the array that's sorted except the maximum element is at the beginning:
 #
 #  a1 = [10,1,2,3,4,5,6,7,8,9]
 #
