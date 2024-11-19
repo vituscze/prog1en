@@ -60,7 +60,8 @@ def partition(a, lo, hi):
 #
 # Clearly this will not change the value that the function computes. Will this modification change its big-O running time?
 
-# a) It will always be zero, since the base case is always zero and the recursive case is just adding zeros together.
+# a) If the recursion stops, the result will always be zero, since the base case is always zero and the recursive
+# case is just adding zeros together. However, since -1 // 2 == -1, the function doesn't work for negative numbers.
 #
 # b) T(N) = O(1) + 2 * T(N / 2)
 #
