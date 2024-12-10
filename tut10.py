@@ -212,7 +212,7 @@ def second():
 # user input. The user can type 'exit' to exit the program. For example:
 
 # expr> 2 + 3
-# 7
+# 5
 # expr> 1 + 22 – 3
 # 20
 # expr> exit
@@ -225,7 +225,7 @@ def second():
 # prompting the user for the next expression. For example:
 
 # expr> 2 + 3
-# 7
+# 5
 # expr> 5 + b
 # Invalid expression
 # expr> 7 * 2
