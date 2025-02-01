@@ -38,7 +38,7 @@ Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cun
 
 * **Implementation** - source code
 * **Test data** - sample inputs and outputs, if applicable
-* **User documentation** - how to use your program
-* **Developer documentation** - how your program works
+* **User documentation** - how to use your program; can be a sufficiently detailed README or a separate document (PDF, webpage, etc)
+* **Developer documentation** - how your program works; for Programming 1 projects, adding reasonable docstrings (see [Python conventions](https://peps.python.org/pep-0257/)) into your code is more than enough
 
 Once you have all that, simply send me an email and if everything is alright, we will meet up (online or in person) and you'll present your project to me. Note that there's usually about a week between submission and presentation, so plan accordingly.
