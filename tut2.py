@@ -9,7 +9,7 @@
 # Prove your answer.
 
 # Reminder: a mod b is the remainder of the (integer) division a div b.
-# a = a * (a div b) + (a mod b); 0 <= a mod b < b.
+# a = b * (a div b) + (a mod b); 0 <= a mod b < b.
 
 # Let's start by checking if this statement holds for a couple of small numbers.
 #   0^2 mod 4 = 0
