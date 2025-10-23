@@ -17,6 +17,7 @@ Tutorials happen every Tuesday 12:20 in N8, Tuesday 15:40 in N10, and Wednesday 
 
 * [Project Euler](https://projecteuler.net/)
 * [LeetCode](https://leetcode.com/)
+* [Codewars](https://www.codewars.com/)
 
 # How to Pass
 
