@@ -33,7 +33,7 @@ There will be a programming test at the very end of the semester. If you do not 
 
 ## Semestral Project
 
-For your semestral project, you will choose and solve a nontrivial programming task. Students typically implement some interesting algorithm, write a simple computer game or a command line tool. Before you start working on your project, I'll first need to approve the topic to make sure it's not too easy (or too hard). Send me a short description and specification of your project and wait for me to approve it before you start writing code.
+For your semestral project, you will choose and solve a nontrivial programming task. Students typically implement some interesting algorithm, write a simple computer game or a command line tool. Before you start working on your project, I'll first need to approve the topic to make sure it's not too easy (or too hard). Submit a short description and specification of your project in ReCodEx and wait for me to approve it before you start writing code.
 
 Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cuni.cz/~dingle/2025-6/prog_1/programming_1.html). To submit your project, you need to provide the following:
 
