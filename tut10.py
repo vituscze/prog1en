@@ -385,21 +385,23 @@ class Scene:
         self.edit_end = pos
 
 BOARD_SIZE = 800
+LINE_WIDTH = 3
 
 class View(tk.Canvas):
     def __init__(self, parent):
         self.scene = Scene()
         super().__init__(parent, width=BOARD_SIZE, height=BOARD_SIZE)
         self.grid()
-        self.bind('<Button>', self.on_mousedown)
-        self.bind('<ButtonRelease>', self.on_mouseup)
+        # Button-1 is the left mouse button
+        self.bind('<Button-1>', self.on_mousedown)
+        self.bind('<ButtonRelease-1>', self.on_mouseup)
         self.bind('<Motion>', self.on_mousemove)
         self.draw()
 
     def draw_line(self, start, end, color):
         s_x, s_y = start
         e_x, e_y = end
-        self.create_line(s_x, s_y, e_x, e_y, width=3, fill=color)
+        self.create_line(s_x, s_y, e_x, e_y, width=LINE_WIDTH, fill=color)
 
     def draw(self):
         self.delete('all')
