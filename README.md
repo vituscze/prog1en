@@ -43,5 +43,3 @@ Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cun
 * **Developer documentation** - how your program works; for Programming 1 projects, adding reasonable docstrings (see [Python conventions](https://peps.python.org/pep-0257/)) into your code is more than enough
 
 Once you have all that, simply send me an email and if everything is alright, we will meet up (online or in person) and you'll present your project to me. Note that there's usually about a week between submission and presentation, so plan accordingly.
-
-This year, I'll see if we can use ReCodEx to take care of the proposals and submissions so that we don't need to send emails back and forth. If so, I'll update this page with more details later.
