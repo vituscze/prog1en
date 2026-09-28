@@ -1,6 +1,6 @@
 # Programming 1 (NPRG030) and Introduction to Algorithms (NPRG062) Tutorials
 
-Tutorials happen every Tuesday 12:20 in N8, Tuesday 15:40 in N10, and Wednesday 14:00 in N8.
+Tutorials happen every Tuesday 9:00 in N11.
 
 # Useful Links
 
@@ -21,7 +21,11 @@ Tutorials happen every Tuesday 12:20 in N8, Tuesday 15:40 in N10, and Wednesday 
 
 # How to Pass
 
-To pass the Introduction to Algorithms tutorials, you need to have sufficient homework score. To pass the Programming 1 tutorials, you need to have sufficient homework score, pass the test at the end of the semester, and submit and present your semestral work.
+To pass the Introduction to Algorithms tutorials, you need to have sufficient homework score. To pass the Programming 1 tutorials, you need to have sufficient homework score, pass the test at the end of the semester, and submit and present your semestral project.
+
+## Attendance
+
+Attendance is recommended but not mandatory. You'll receive 1 bonus point for each tutorial session you attend (for both Introduction to Algorithms and Programming 1). These points do not count towards the maximum.
 
 ## Homework
 
@@ -33,9 +37,9 @@ There will be a programming test at the very end of the semester. If you do not 
 
 ## Semestral Project
 
-For your semestral project, you will choose and solve a nontrivial programming task. Students typically implement some interesting algorithm, write a simple computer game or a command line tool. Before you start working on your project, I'll first need to approve the topic to make sure it's not too easy (or too hard). Submit a short description and specification of your project in ReCodEx and wait for me to approve it before you start writing code.
+For your semestral project, you will choose and solve a nontrivial programming task. Students typically implement some interesting algorithm, write a simple computer game or a command line tool. Before you start working on your project, I'll first need to approve the topic to make sure it's not too easy (or too hard). Submit a short description and specification of your project in ReCodEx (there will be a special assignment just for that) and wait for me to approve it before you start writing code.
 
-Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cuni.cz/~dingle/2025-6/prog_1/programming_1.html). To submit your project, you need to provide the following:
+Deadlines for proposals and submissions can be found [here](https://ksvi.mff.cuni.cz/~dingle/2026-7/prog_1/programming_1.html). To submit your project, you need to provide the following:
 
 * **Implementation** - source code
 * **Test data** - sample inputs and outputs, if applicable

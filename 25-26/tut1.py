@@ -3,17 +3,21 @@
 # How to pass the tutorial
 #
 # * Attendance strongly recommended, but not mandatory
-#   - 1 extra bonus point for each tutorial you attend
 # * Homework
 #   - Assigned every week, starting next week
 #   - 70% (i.e. 70 points) required to pass the tutorial
 #   - Submitted via ReCodEx (see below), make sure you have an account
+#   - Do not copy code from other students or the internet
 #   - If you get stuck, I can give you some hints
+# * You need to pass the tutorial before you can go to the exam
 
 # Study materials
 #
 # * GitHub repository
 # * Discord server (optional)
+# * Recordings
+#   - Posted every week to the Discord server
+#   - Also available on request
 
 ## Powers of two ##
 
@@ -62,52 +66,18 @@
 # then simply use the approach from a) on N/2 winners and N/2 losers, giving us N/2 + N/2 - 1 + N/2 - 1 = 3N/2 - 2
 # uses of the scales.
 
-## Squares Mod 4 ##
-
-# Is this statement true or false?
-# For all integers n, n^2 mod 4 < 2.
-# Prove your answer.
-
-# Reminder: a mod b is the remainder of the (integer) division a div b.
-# a = b * (a div b) + (a mod b); 0 <= a mod b < b.
-
-# Let's start by checking if this statement holds for a couple of small numbers.
-#   0^2 mod 4 = 0
-#   1^2 mod 4 = 1
-#   2^2 mod 4 = 0
-#   3^2 mod 4 = 1
-#   4^2 mod 4 = 0
-#   5^2 mod 4 = 1
-#   ...
-#
-# It seems that we get 0 for even numbers and 1 for odd numbers. But this is not a proof!
-# We need to show that the result is 0 (1) for ANY even (odd) number.
-#
-# Even numbers are divisible by 2. We can thus write any even number n as n = 2k (where k is another integer).
-# Let's see what happens when we use this identity in the remainder calculation:
-#
-#   (2k)^2 mod 4 = 4k^2 mod 4 = 0
-#
-# 4k^2 is ALWAYS a multiple of 4, so there's no remainder.
-#
-# Similarly, odd numbers can be expressed as 2k + 1:
-#
-#   (2k+1)^2 mod 4 = 4k^2 + 4k + 1 mod 4 = 4(k^2 + k) + 1 mod 4 = 1
-#
-# We can immediately see that the number is always 1 higher than a multiple of 4.
-
 ### Programming 1 Tutorial ###
 
 # How to pass the tutorial
 #
 # * Attendance strongly recommended, but not mandatory
-#   - 1 extra bonus point for each tutorial you attend
 # * Homework
 #   - Assigned every week, starting next week
 #   - 70% (i.e. 70 points) required to pass the tutorial
 #   - Submitted via ReCodEx (https://recodex.mff.cuni.cz/)
 #     * Check README for useful links (new user guide, student guide)
 #   - If you get stuck, I can give you some hints
+#   - Do not copy code from other students or the internet
 # * Test
 #   - At the end of the semester, details will be specified later
 #   - Additional test dates during the exam period
@@ -118,23 +88,28 @@
 #   - Before you start working, submit a proposal and wait for confirmation
 #     * Description of the problem and specification of the solution
 #     * Doesn't have to be long, 1-2 paragraphs is usually enough
-#     * Submit via ReCodEx
 #   - To submit a project, you need to provide:
 #     * Source code
 #     * Test data (sample inputs and outputs, if applicable)
 #     * User documentation (explain how to use the program to your users)
 #     * Developer documentation (explain how your programs works to other developers)
-#   - Deadlines are on the course page (https://ksvi.mff.cuni.cz/~dingle/2026-7/prog_1/programming_1.html)
+#   - Deadlines are on the course page (https://ksvi.mff.cuni.cz/~dingle/2025-6/prog_1/programming_1.html)
+#   - If everything works out, proposals and submissions will also happen through ReCodEx
+#     * I'll specify the details as we get closer to the deadlines
 
 # Study materials
 #
 # * GitHub repository
 # * Discord server (optional)
+# * Recordings
+#   - Posted every week to the Discord server
+#   - Also available on request
 
 ## Python ##
 #
 # You can download the latest version of python here: https://www.python.org/downloads/
-# I'll be using VS Code here but feel free to use any IDE you're comfortable with.
+# I'll be using Visual Studio here, which will be using in the summer semester where
+# we'll be programming in C#. But feel free to use any IDE you're comfortable with.
 #
 # Python is an interpreted language. The python executable takes your code and executes
 # it. There are also compiled languages (such as C), that first translate the code into
