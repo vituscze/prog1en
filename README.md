@@ -7,7 +7,7 @@ Tutorials happen every Tuesday 9:00 in N11.
 * [Python](https://www.python.org/downloads/)
 * [Python tutorial](https://docs.python.org/3/tutorial/)
 * [Python documentation](https://docs.python.org/3/)
-* [Visual Studio](https://visualstudio.microsoft.com/)
+* [VS Code](https://code.visualstudio.com/)
 * [ReCodEx](https://recodex.mff.cuni.cz/)
 * [ReCodEx documentation](https://github.com/ReCodEx/wiki/wiki/User-documentation)
 * [ReCodEx new user guide](http://www.ms.mff.cuni.cz/ReCodEx/NewUserDocEng.pdf)
