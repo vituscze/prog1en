@@ -18,6 +18,7 @@ Tutorials happen every Tuesday 9:00 in N11.
 * [Project Euler](https://projecteuler.net/)
 * [LeetCode](https://leetcode.com/)
 * [Codewars](https://www.codewars.com/)
+* [Codeforces](https://codeforces.com/)
 
 # How to Pass
 
